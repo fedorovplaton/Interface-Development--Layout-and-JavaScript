@@ -1,0 +1,45 @@
+div{
+    width: 150px;
+    height: 150px;
+    border-style: solid; /* Стиль линии вокруг параграфа */
+    padding: 5px;
+    border-color: #ff6698;
+
+    transition-property: border-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.animation
+{
+    /*
+    animation-name: goTo;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;*/
+    animation: goTo 3s linear 4 alternate ;
+}
+
+@keyframes goTo {
+    25%{
+        transform: translateX(100px);
+    }
+    50%{
+        transform: translate(100px, 150px);
+    }
+    75%{
+        transform: translate(100px, 150px) scale(2) rotate(145deg);
+    }
+    100%{
+        transform: translate(100px, 150px) scale(2) rotate(145deg);
+    }
+}
+
+div:hover{
+    border-color: #ff0;
+}
+
+
