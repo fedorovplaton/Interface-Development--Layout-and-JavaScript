@@ -1,0 +1,110 @@
+body {
+    height: 100%;
+    width: 1200px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: 0;
+
+    border: 1px solid green;
+}
+
+fieldset {
+    border:0 none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.gallery {
+    width: 100%;
+    height: 400px;
+}
+
+.vegetable {
+    position: relative;
+    display: inline-block;
+
+    width: 24%;
+
+    text-align: center;
+
+    border: 1px solid red;
+}
+
+.image {
+    width: 80%;
+}
+
+a:hover ~ .description{
+    display: inline-block;
+    position: relative;
+}
+
+.description {
+    display: none;
+    position: absolute;
+    width: 150%;
+    top: 0;
+}
+
+
+
+
+
+.light-box {
+    display: none;
+
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,0.4);
+}
+
+.light-box img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.light-box:target {
+    outline: none;
+
+    display: block;
+}
+
+.exit-cross {
+    position: absolute;
+    outline: none;
+    border: none;
+    background: url("exit-cross.svg") 50% 50% no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+.scroll-bar {
+    display: inline-block;
+    width:  100%;
+    text-align: center;
+}
+
+
