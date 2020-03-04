@@ -1,0 +1,280 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 984px;
+    min-width: 984px;
+    max-width: 100%;
+    height: 1614px;
+
+    border: 18px solid white;
+    background-color: #f6f5f3;
+
+    font-family: Arial,sans-serif;
+}
+
+.logo-box {
+    width: 100%;
+    height: 130px;
+    padding-bottom: 33px;
+
+    background-image: url("logoShape.png");
+    background-repeat: no-repeat;
+    background-position-x: 744px;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+    background-image: url("logoName.png");
+    background-size: 95px 55px;
+    background-repeat: no-repeat;
+    background-position: 779px 27px;
+}
+
+.quote-offroad {
+    position: relative;
+
+    width: 649px;
+    height: 326px;
+    margin-left: 178px;
+
+    padding: 0;
+
+    font-size:  36px;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+
+    background-image: url("Offroadcars.png");
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+}
+
+blockquote {
+    position: absolute;
+
+    padding: 0;
+    margin: 0;
+
+    left: 4px;
+    top: -6px;
+
+    line-height: 43px;
+    text-indent: 2px;
+}
+
+blockquote:before {
+    content: '\00ab';
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+blockquote:after {
+    content: '\00bb';
+    position: absolute;
+}
+
+.offroads {
+    width: 641px;
+    height: 125px;
+    margin-left: 178px;
+
+    background-image: url("Offroadcars.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.normal-left {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    border-radius: 50px;
+    top: 50%;
+    transform: translate(-106px, -50%);
+
+    box-shadow: 1px 1px 0 rgba(255, 90, 0, 0.8);
+    background-color: #ffdb4a
+}
+
+.normal-left img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.normal-right {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    background: #ffdb4a;
+    border-radius: 50px;
+    top: 50%;
+    right: 0;
+    transform: translate(83px, -50%);
+    box-shadow: 1px 1px 0 rgba(255, 90, 0, 0.8);
+}
+
+.normal-right img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-block {
+    display: block;
+    position:relative;
+    width: 641px;
+    height: 361px;
+    margin: 56px auto 70px;
+    background: url("Videosnapshot.png") no-repeat;
+    background-size: 641px 361px;
+}
+
+.video-name {
+    display: block;
+    vertical-align: center;
+    background-image: url("video-name-shape.png");
+    width: 100%;
+    height: 49px;
+    text-align: center;
+    font-size: 29.02px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.video-name-text {
+    position: absolute;
+    top: 6px;
+    left: 173px;
+}
+
+.video-play-button{
+    position: absolute;
+    width: 126px;
+    height: 126px;
+    border-radius: 126px;
+    top: 50%;
+    left: 50%;
+    background-color: #ffdb4a;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 0 rgba(255, 90, 0, 0.8);
+    background-image: url("Video-button.png");
+    background-position: 47px 35px;
+    background-repeat: no-repeat;
+}
+
+.video-play-button:hover {
+    opacity: 0.8;
+}
+
+.benefits{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.benefits-promo-text{
+    text-align: center;
+    font-size: 47px;
+}
+
+.benefit-card{
+    position: relative;
+    display: inline-block;
+
+    vertical-align: bottom;
+
+    margin-top: 122px;
+
+    width: 222px;
+    height: 221px;
+}
+
+.benefit-card img{
+    position: absolute;
+    display: none;
+}
+
+.benefit-card-name {
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.benefit-card .description{
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.benefits > .benefit-card:nth-child(2){
+    margin-left: 40px;
+}
+
+.benefits > .benefit-card:nth-child(2) img{
+    display: block;
+    bottom: 224px;
+    left: 3px;
+}
+
+
+.benefits > .benefit-card:nth-child(3){
+    margin-left: 16px;
+}
+.benefits > .benefit-card:nth-child(3) img{
+    display: block;
+    left: -2px;
+    bottom: 230px;
+}
+
+.benefits > .benefit-card:nth-child(4){
+    margin-left: 13px;
+}
+.benefits > .benefit-card:nth-child(4) img{
+    display: block;
+    left: -7px;
+    bottom: 235px;
+}
+
+.benefits > .benefit-card:nth-child(5){
+    margin-left: 13px;
+}
+.benefits > .benefit-card:nth-child(5) img{
+    display: block;
+    bottom: 235px;
+}
+
+
+.agitation-text{
+    position: relative;
+    top:-6px;
+    margin-left: 191px;
+    font-family: Arial,sans-serif;
+    font-size: 42px;
+}
+
+.try-now-button {
+    position: relative;
+    width: 316px;
+    height: 70px;
+    margin-left: 333px;
+    margin-top: 55px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 36px;
+    background: linear-gradient(to top, #f1db00,#ffe34a);
+}
+
+.try-now-button:hover {
+    background: linear-gradient(to top, #ffe12f, #ffe86a);
+}
+

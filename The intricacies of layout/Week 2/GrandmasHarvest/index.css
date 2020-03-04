@@ -1,55 +1,133 @@
 body {
+    width: 100%;
     height: 100%;
-    width: 1200px;
 
-    margin-right: auto;
-    margin-left: auto;
-
-    padding: 0;
-
-    border: 1px solid green;
-}
-
-fieldset {
-    border:0 none;
     margin: 0;
     padding: 0;
 }
 
-img {
-    max-width: 100%;
+fieldset {
+    border:0 none;
+    margin: 10px;
+    padding: 0;
+}
+
+.content {
+    display: block;
+    position: relative;
+
+    height: 400px;
+    width: 1200px;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+
+
+    white-space: nowrap;
 }
 
 .gallery {
+    display: block;
+
+    position: relative;
     width: 100%;
-    height: 400px;
+    height:200px;
+
+    right: -1.5%;
 }
 
-.vegetable {
+a{
     position: relative;
     display: inline-block;
 
-    width: 24%;
+    vertical-align: middle;
+    line-height: 0;
+
+    width: 20%;
+
+    margin: 0 2%;
 
     text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
 
-    border: 1px solid red;
+    white-space: normal;
+}
+
+a:visited,
+a:active,
+a:link{
+    color: black;
+}
+
+a:hover:not(.exit-cross) {
+    position: absolute;
+    height: auto;
+    background: white;
+}
+
+a:hover + .control {
+    display: inline-block;
 }
 
 .image {
-    width: 80%;
+    position: relative;
+    max-width: 100%;
+    max-height: 150px;
+    line-height: normal;
+    left: 0;
 }
 
-a:hover ~ .description{
-    display: inline-block;
+.image:hover {
+    z-index: 2;
+    padding: 2px 0;
+}
+
+.image:hover ~ .description {
+    display: block;
     position: relative;
+    width: 100%;
+    z-index: 2;
+    padding: 4% 0;
+}
+
+.image:hover ~ .card {
+    display: block;
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: white;
+
+    top: 0;
+    left: -10%;
+
+    z-index: 1;
+
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+.card {
+    display: none;
 }
 
 .description {
     display: none;
-    position: absolute;
-    width: 150%;
-    top: 0;
+    text-align: left;
+    line-height: normal;
+}
+
+.control {
+    display: none;
+    position: relative;
+    vertical-align: middle;
+    line-height: 0;
+    width: 20%;
+    margin: 0 2%;
+
+    z-index: 400;
 }
 
 
@@ -92,19 +170,109 @@ a:hover ~ .description{
     background-size: contain;
     width: 50px;
     height: 50px;
-    top: 20px;
-    right: 20px;
+    top: 5%;
+    right: 5%;
 }
 
+.big-image {
+    max-height: 70%;
+    max-width: 70%;
+}
 
 
 
 
 
 .scroll-bar {
+    position: absolute;
     display: inline-block;
     width:  100%;
     text-align: center;
 }
 
+input[type="radio"] {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+input[value = "1"]{
+    transform: translateX(-450%);
+}
+
+input[value = "2"]{
+    transform: translateX(-250%);
+}
+
+input[value = "4"]{
+    transform: translateX(150%);
+}
+
+input[value = "5"]{
+    transform: translateX(350%);
+}
+
+
+input[value = "1"]:checked ~ .gallery{
+    right: -1.5%;
+}
+
+input[value = "2"]:checked ~ .gallery{
+    right: 71.5%;
+}
+
+input[value = "3"]:checked ~ .gallery{
+    right: 144%;
+}
+
+input[value = "4"]:checked ~ .gallery{
+    right: 217%;
+}
+
+input[value = "5"]:checked ~ .gallery{
+    right: 292%;
+}
+
+
+/*
+input[value = "1"]:checked ~ .gallery > a:nth-child(1),
+input[value = "1"]:checked ~ .gallery > a:nth-child(3),
+input[value = "1"]:checked ~ .gallery > a:nth-child(5),
+input[value = "1"]:checked ~ .gallery > a:nth-child(7) {
+    display: inline-block;
+}
+
+input[value = "2"]:checked ~ .gallery > a:nth-child(7),
+input[value = "2"]:checked ~ .gallery > a:nth-child(9),
+input[value = "2"]:checked ~ .gallery > a:nth-child(11),
+input[value = "2"]:checked ~ .gallery > a:nth-child(13) {
+    display: inline-block;
+}
+
+input[value = "3"]:checked ~ .gallery > a:nth-child(13),
+input[value = "3"]:checked ~ .gallery > a:nth-child(15),
+input[value = "3"]:checked ~ .gallery > a:nth-child(17),
+input[value = "3"]:checked ~ .gallery > a:nth-child(19) {
+    display: inline-block;
+}
+
+input[value = "4"]:checked ~ .gallery > a:nth-child(19),
+input[value = "4"]:checked ~ .gallery > a:nth-child(21),
+input[value = "4"]:checked ~ .gallery > a:nth-child(23),
+input[value = "4"]:checked ~ .gallery > a:nth-child(25) {
+    display: inline-block;
+}
+
+input[value = "5"]:checked ~ .gallery > a:nth-child(25),
+input[value = "5"]:checked ~ .gallery > a:nth-child(27),
+input[value = "5"]:checked ~ .gallery > a:nth-child(29),
+input[value = "5"]:checked ~ .gallery > a:nth-child(31) {
+    display: inline-block;
+}
+
+ */
+
+.gallery > a {
+    display: none;
+}
